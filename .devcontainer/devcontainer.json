@@ -1,0 +1,23 @@
+// .devcontainer/devcontainer.json
+{
+    "name": "Ubuntu 22.04 Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "containerEnv": {
+        "SHELL": "/bin/bash"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "postCreateCommand": ".devcontainer/post-create.sh"
+}
